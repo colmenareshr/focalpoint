@@ -1,11 +1,4 @@
-import localFont from "next/font/local";
-import "./globals.css";
-
-const interTight = localFont({
-  src: "./fonts/InterTight-Regular.ttf",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import "./globals.scss";
 
 export const metadata = {
   title: "FocalPoint",
@@ -15,9 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
